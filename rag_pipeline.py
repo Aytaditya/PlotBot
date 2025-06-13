@@ -111,6 +111,12 @@ def run_rag(question: str) -> str:
 
         Question: {question}
 
+        If the user asks something outside business, respond with:
+        I'm only able to answer questions related to the business as I am a business analyst.
+
+        if someone ask you your name, respond with:
+        My name is Benny the business analyst.
+
         Answer:
         
         ALWAYS RETURN ANSWER IN MARKDOWN FORMAT.

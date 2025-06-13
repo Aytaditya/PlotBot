@@ -3,7 +3,7 @@
 	import { onMount } from 'svelte';
 	
 	let messages = $state([
-		{ id: 1, text: marked("Hello! How can I help you today?"), isBot: true, timestamp: new Date(), isMarkdown: true }
+		{ id: 1, text: marked("Hello! How can I help you today? *All responses are sourced from the internet.*"), isBot: true, timestamp: new Date(), isMarkdown: true }
 	]);
 	let inputText = $state('');
 	let isTyping = $state(false);
@@ -58,7 +58,7 @@
 
 			const botMessage = {
 				id: Date.now() + 1,
-				text: marked(answerText),
+				text: marked(answerText + "\n\n*Response sourced from internet data.*"),
 				isBot: true,
 				timestamp: new Date(),
 				isMarkdown: true
@@ -110,7 +110,7 @@
 						</svg>
 					</div>
 					<div class="brand-text">
-						<h1>PlotBot</h1>
+						<h1>Benny the BA</h1>
 						<p>AI Assistant</p>
 					</div>
 				</div>
@@ -135,6 +135,13 @@
 						<div class="feature-text">
 							<span class="feature-title">Smart AI</span>
 							<span class="feature-desc">Advanced reasoning</span>
+						</div>
+					</div>
+					<div class="feature-item">
+						<div class="feature-icon">🌐</div>
+						<div class="feature-text">
+							<span class="feature-title">Internet Sourced</span>
+							<span class="feature-desc">All responses from web</span>
 						</div>
 					</div>
 				</div>
@@ -164,7 +171,7 @@
 							</svg>
 						</div>
 						<div class="header-text">
-							<h2>AI Assistant</h2>
+							<h2>Benny</h2>
 							<div class="status-indicator">
 								<div class="status-dot"></div>
 								<span>Online</span>
@@ -253,7 +260,7 @@
 							</button>
 						</div>
 						<div class="input-hint">
-							Press Enter to send, Shift + Enter for new line
+							Press Enter to send, Shift + Enter for new line • All responses sourced from internet
 						</div>
 					</div>
 				</footer>
