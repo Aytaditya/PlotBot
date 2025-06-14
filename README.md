@@ -16,7 +16,6 @@
 - 🧬 Stores & retrieves documents from **ChromaDB**
 - 💬 Responds using RAG pipeline with LangChain
 
-
 ![Apple](./images/apple.png)
 
 ---
@@ -46,37 +45,48 @@
 │   ├── requirements.txt
 │   └── Dockerfile
 └── README.md
-🐳 Running Locally (Dev)
-1. Clone the Repo
-bash
-Copy
-Edit
+```
+
+Here’s a clean and well-structured version of your markdown instructions for **🐳 Running Locally (Dev)**:
+
+---
+
+## 🐳 Running Locally (Dev)
+
+### 1. Clone the Repo
+
+```bash
 git clone https://github.com/yourusername/benny-chatbot.git
 cd benny-chatbot
-2. Backend (FastAPI)
-bash
-Copy
-Edit
+```
+
+### 2. Backend (FastAPI)
+
+Using `pip`
+
+```bash
 cd backend
 pip install -r requirements.txt
 uvicorn main:app --reload --port 8000
-Or run with Docker:
+```
 
-bash
-Copy
-Edit
+### Or using Docker
+
+```bash
+cd backend
 docker build -t benny-backend -f Dockerfile .
 docker run -p 8000:8000 benny-backend
-3. Frontend (SvelteKit)
-bash
-Copy
-Edit
-cd frontend
+```
+
+### 3. Frontend (SvelteKit)
+
+```bash
+cd ../frontend
 npm install
 npm run dev -- --host
-Open in browser: http://localhost:5173
-
 ```
+
+🔗 Open in your browser: [http://localhost:5173](http://localhost:5173)
 
 ---
 
@@ -133,4 +143,3 @@ SERPAPI_API_KEY=your_serpapi_key
 
 -Multi-source search (YouTube, news, PDFs, etc.)
 
----
